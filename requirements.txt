@@ -1,0 +1,9 @@
+chromadb
+gradio
+google-generativeai
+python-dotenv
+sentence-transformers
+rank-bm25
+pdfplumber
+fastapi
+uvicorn

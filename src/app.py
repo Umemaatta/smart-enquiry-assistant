@@ -1,5 +1,8 @@
 import os
+import sys
 import base64
+import subprocess
+
 import chromadb
 import gradio as gr
 import google.generativeai as genai
@@ -18,7 +21,9 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    raise ValueError("GEMINI_API_KEY not found in .env file.")
+    raise ValueError(
+        "GEMINI_API_KEY not found. Please add it to the environment variables."
+    )
 
 genai.configure(api_key=api_key)
 
@@ -38,13 +43,49 @@ embedding_model = SentenceTransformer(
 # 3. CHROMADB
 # =========================================================
 
+database_path = "data/chroma_db"
+
+os.makedirs("data", exist_ok=True)
+
+
+# If ChromaDB does not exist, create it automatically
+if not os.path.exists(database_path):
+
+    print("ChromaDB not found.")
+    print("Creating database from university PDF...")
+
+    subprocess.run(
+        [sys.executable, "src/create_database.py"],
+        check=True
+    )
+
+    print("Database created successfully.")
+
+
 client = chromadb.PersistentClient(
-    path="data/chroma_db"
+    path=database_path
 )
 
-collection = client.get_collection(
-    name="quest_documents"
-)
+
+try:
+
+    collection = client.get_collection(
+        name="quest_documents"
+    )
+
+except Exception:
+
+    print("QUEST collection not found.")
+    print("Creating database...")
+
+    subprocess.run(
+        [sys.executable, "src/create_database.py"],
+        check=True
+    )
+
+    collection = client.get_collection(
+        name="quest_documents"
+    )
 
 
 # =========================================================
@@ -87,12 +128,15 @@ model = genai.GenerativeModel(
 logo_path = "assets/quest_logo.png"
 
 if not os.path.exists(logo_path):
+
     raise FileNotFoundError(
         "QUEST logo not found. Please make sure this file exists:\n"
         "assets/quest_logo.png"
     )
 
+
 with open(logo_path, "rb") as image_file:
+
     logo_base64 = base64.b64encode(
         image_file.read()
     ).decode("utf-8")
@@ -105,51 +149,85 @@ with open(logo_path, "rb") as image_file:
 def answer_question(question, history):
 
     if not question or not question.strip():
+
         return history or [], ""
 
     question = question.strip()
 
-    # Semantic search
+
+    # -----------------------------------------------------
+    # Semantic Search
+    # -----------------------------------------------------
+
     question_embedding = embedding_model.encode(
         question
     ).tolist()
 
+
     semantic_results = collection.query(
-        query_embeddings=[question_embedding],
+
+        query_embeddings=[
+            question_embedding
+        ],
+
         n_results=3
     )
+
 
     semantic_documents = semantic_results[
         "documents"
     ][0]
 
-    # Keyword search
+
+    # -----------------------------------------------------
+    # Keyword Search
+    # -----------------------------------------------------
+
     tokenized_question = question.lower().split()
+
 
     bm25_scores = bm25.get_scores(
         tokenized_question
     )
 
+
     top_indexes = bm25_scores.argsort()[-3:][::-1]
 
+
     keyword_documents = [
+
         documents[index]
+
         for index in top_indexes
+
     ]
 
-    # Combine results
+
+    # -----------------------------------------------------
+    # Combine Results
+    # -----------------------------------------------------
+
     combined = []
+
 
     for document in (
         semantic_documents + keyword_documents
     ):
+
         if document not in combined:
+
             combined.append(document)
+
 
     combined = combined[:3]
 
-    # Create context
+
+    # -----------------------------------------------------
+    # Create Context
+    # -----------------------------------------------------
+
     context_parts = []
+
 
     for document in combined:
 
@@ -157,16 +235,25 @@ def answer_question(question, history):
 
         page = metadatas[index]["page"]
 
+
         context_parts.append(
+
             f"[PAGE {page}]\n{document}"
+
         )
+
 
     context = "\n\n".join(
         context_parts
     )
 
-    # Gemini prompt
+
+    # =====================================================
+    # GEMINI PROMPT
+    # =====================================================
+
     prompt = f"""
+
 You are the Smart Enquiry Assistant for
 Quaid-e-Awam University of Engineering,
 Science & Technology, Nawabshah (QUEST).
@@ -193,9 +280,12 @@ Student Question:
 
 University Information:
 {context}
+
 """
 
+
     print("\nGenerating answer...")
+
 
     try:
 
@@ -204,6 +294,7 @@ University Information:
         )
 
         answer_text = response.text
+
 
     except Exception as error:
 
@@ -214,8 +305,13 @@ University Information:
             "right now. Please try again."
         )
 
-    # Sources
+
+    # =====================================================
+    # SOURCES
+    # =====================================================
+
     source_pages = []
+
 
     for document in combined:
 
@@ -223,38 +319,57 @@ University Information:
 
         page = metadatas[index]["page"]
 
+
         if page not in source_pages:
+
             source_pages.append(page)
+
 
     if source_pages:
 
         sources = "\n".join(
+
             [
+
                 f"📄 QUEST University PDF — Page {page}"
+
                 for page in source_pages
+
             ]
+
         )
 
     else:
 
         sources = "No document source found."
 
-    # Chat history
+
+    # =====================================================
+    # CHAT HISTORY
+    # =====================================================
+
     history = history or []
 
+
     history.append(
+
         {
             "role": "user",
             "content": question
         }
+
     )
 
+
     history.append(
+
         {
             "role": "assistant",
             "content": answer_text
         }
+
     )
+
 
     return history, sources
 
@@ -264,6 +379,7 @@ University Information:
 # =========================================================
 
 def clear_chat():
+
     return [], ""
 
 
@@ -286,34 +402,43 @@ body {
    LARGE QUEST HEADER
    ===================================================== */
 
-..quest-header {
+.quest-header {
+
     width: 100%;
+
     height: 380px;
+
     background: white;
+
     border-bottom: 5px solid #1f4e79;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 0;
+
     margin-bottom: 25px;
+
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
     box-sizing: border-box;
 }
 
+
 .quest-logo {
+
     display: block;
+
     width: 100%;
+
     height: 360px;
+
     object-fit: contain;
+
     object-position: center;
-}
-
-
-/* =====================================================
-   LARGE LOGO
-   ===================================================== */
-
-
 }
 
 
@@ -328,6 +453,7 @@ body {
     margin: 15px 0 30px 0;
 }
 
+
 .page-title h1 {
 
     color: #1f4e79;
@@ -338,6 +464,7 @@ body {
 
     margin-bottom: 8px;
 }
+
 
 .page-title p {
 
@@ -369,6 +496,7 @@ body {
     margin-bottom: 10px;
 }
 
+
 .ask-title {
 
     color: #1f4e79;
@@ -394,6 +522,7 @@ body {
     font-size: 15px !important;
 }
 
+
 #question-box textarea:focus {
 
     border: 2px solid #1f4e79 !important;
@@ -415,6 +544,7 @@ body {
     font-weight: 600 !important;
 }
 
+
 #ask-button:hover {
 
     background: #163b5d !important;
@@ -435,6 +565,7 @@ body {
 
     margin-bottom: 8px;
 }
+
 
 .chat-container {
 
@@ -462,6 +593,7 @@ body {
     font-weight: 700;
 }
 
+
 #source-box textarea {
 
     background: white !important;
@@ -482,6 +614,7 @@ body {
 
     margin-top: 25px;
 }
+
 
 .question-card {
 
@@ -522,6 +655,7 @@ body {
     line-height: 1.7;
 }
 
+
 .footer-title {
 
     color: #1f4e79;
@@ -542,8 +676,11 @@ body {
 
         min-height: 220px;
 
+        height: 220px;
+
         padding: 5px 10px;
     }
+
 
     .quest-logo {
 
@@ -552,10 +689,12 @@ body {
         height: 210px;
     }
 
+
     .page-title h1 {
 
         font-size: 25px;
     }
+
 }
 
 """
@@ -575,7 +714,9 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.HTML(
+
         f"""
+
         <div class="quest-header">
 
             <img
@@ -585,7 +726,9 @@ with gr.Blocks(
             >
 
         </div>
+
         """
+
     )
 
 
@@ -594,7 +737,9 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.HTML(
+
         """
+
         <div class="page-title">
 
             <h1>
@@ -607,7 +752,9 @@ with gr.Blocks(
             </p>
 
         </div>
+
         """
+
     )
 
 
@@ -616,7 +763,9 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.HTML(
+
         """
+
         <div class="ask-card">
 
             <div class="ask-title">
@@ -624,7 +773,9 @@ with gr.Blocks(
             </div>
 
         </div>
+
         """
+
     )
 
 
@@ -637,6 +788,7 @@ with gr.Blocks(
         lines=2,
 
         elem_id="question-box"
+
     )
 
 
@@ -647,13 +799,20 @@ with gr.Blocks(
     with gr.Row():
 
         ask_button = gr.Button(
+
             "Ask Question",
+
             variant="primary",
+
             elem_id="ask-button"
+
         )
 
+
         clear_button = gr.Button(
+
             "Clear Conversation"
+
         )
 
 
@@ -662,8 +821,11 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.Markdown(
+
         "### 💬 Conversation",
+
         elem_classes=["conversation-title"]
+
     )
 
 
@@ -674,6 +836,7 @@ with gr.Blocks(
         height=450,
 
         elem_classes=["chat-container"]
+
     )
 
 
@@ -682,8 +845,11 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.Markdown(
+
         "### 📚 Document Sources",
+
         elem_classes=["sources-title"]
+
     )
 
 
@@ -696,6 +862,7 @@ with gr.Blocks(
         lines=3,
 
         elem_id="source-box"
+
     )
 
 
@@ -704,13 +871,18 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.Markdown(
+
         "### 💡 Common Questions",
+
         elem_classes=["common-title"]
+
     )
 
 
     gr.Markdown(
+
         """
+
         <div class="question-card">
         • What is the minimum percentage required for Engineering programs?
         </div>
@@ -726,7 +898,9 @@ with gr.Blocks(
         <div class="question-card">
         • Is Pre-Medical eligible for Artificial Intelligence?
         </div>
+
         """
+
     )
 
 
@@ -735,7 +909,9 @@ with gr.Blocks(
     # -----------------------------------------------------
 
     gr.HTML(
+
         """
+
         <div class="quest-footer">
 
             <div class="footer-title">
@@ -751,7 +927,9 @@ with gr.Blocks(
             with QUEST University.
 
         </div>
+
         """
+
     )
 
 
@@ -778,6 +956,7 @@ with gr.Blocks(
         fn=lambda: "",
 
         outputs=question
+
     )
 
 
@@ -800,6 +979,7 @@ with gr.Blocks(
         fn=lambda: "",
 
         outputs=question
+
     )
 
 
@@ -811,6 +991,7 @@ with gr.Blocks(
             chatbot,
             source
         ]
+
     )
 
 
@@ -819,6 +1000,15 @@ with gr.Blocks(
 # =========================================================
 
 app.launch(
+
     theme=gr.themes.Soft(),
-    css=css
+
+    css=css,
+
+    server_name="0.0.0.0",
+
+    server_port=int(
+        os.environ.get("PORT", 7860)
+    )
+
 )
