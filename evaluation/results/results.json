@@ -1,0 +1,1691 @@
+{
+  "summary": {
+    "total_questions": 100,
+    "answerable_questions": 80,
+    "unanswerable_questions": 20,
+    "overall_answer_accuracy_percent": 78.0,
+    "answerable_page_retrieval_hit_percent": 97.5,
+    "unanswerable_refusal_accuracy_percent": 100.0
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What is the minimum HSC-II percentage required for Engineering (B.E) programs?",
+      "answerable": true,
+      "reference_answer": "Engineering programs require a minimum of 60% in HSC-II, excluding Hifz-ul-Quran.",
+      "ai_answer": "The minimum HSC-II percentage required for Engineering (B.E) programs is 60% (excluding Hifz-ul-Quran, and grace marks are not counted).",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 2,
+      "question": "What is the minimum HSC-II percentage for Science and Technology BS programs?",
+      "answerable": true,
+      "reference_answer": "Science and Technology BS programs require a minimum of 50% in HSC-II.",
+      "ai_answer": "The minimum HSC-II percentage for Science & Technology BS programs is 50%.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 3,
+      "question": "Are grace marks counted for Engineering eligibility?",
+      "answerable": true,
+      "reference_answer": "No. Grace marks are not counted for Engineering eligibility.",
+      "ai_answer": "No, grace marks are not counted for Engineering eligibility.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 4,
+      "question": "What must an HSC-I student do later to remain eligible?",
+      "answerable": true,
+      "reference_answer": "An HSC-I student must later meet the required HSC-II marks.",
+      "ai_answer": "An HSC-I student must later meet the required HSC-II marks to remain eligible.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 5,
+      "question": "Are reserved seats available for differently-abled applicants?",
+      "answerable": true,
+      "reference_answer": "Yes. Reserved seats are available for differently-abled applicants.",
+      "ai_answer": "Yes, reserved seats are available for differently-abled applicants.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 6,
+      "question": "What domicile document is required for admission?",
+      "answerable": true,
+      "reference_answer": "A PRC (Form C) of the relevant category is required.",
+      "ai_answer": "You must possess the PRC (Form C) of the relevant category.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 7,
+      "question": "Can a student with a previous admission apply again?",
+      "answerable": true,
+      "reference_answer": "Previous admissions are not eligible unless the student applies under Self-Finance with an undertaking.",
+      "ai_answer": "Previous admissions are not eligible unless it is through Self-Finance with an undertaking.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 8,
+      "question": "What happens if fake documents are submitted?",
+      "answerable": true,
+      "reference_answer": "Admission is cancelled and legal action is applied.",
+      "ai_answer": "Admission is cancelled and legal action is applied.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 9,
+      "question": "Who is ineligible because of disciplinary issues?",
+      "answerable": true,
+      "reference_answer": "Students who have been rusticated or debarred are ineligible.",
+      "ai_answer": "Those who are rusticated or debarred are ineligible because of disciplinary issues.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 10,
+      "question": "Which programs are available to Pre-Engineering students?",
+      "answerable": true,
+      "reference_answer": "Pre-Engineering students are eligible for Engineering and Science programs.",
+      "ai_answer": "Pre-Engineering students are eligible for Engineering & Science programs.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 11,
+      "question": "Which programs can Pre-Medical students apply for?",
+      "answerable": true,
+      "reference_answer": "Pre-Medical students are eligible for IT, AI, Chemistry, and English, with a Mathematics course.",
+      "ai_answer": "Pre-Medical students are eligible for IT, AI, Chemistry, and English (with Mathematics course) programs.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 12,
+      "question": "What percentage is required for DAE holders under Category-F?",
+      "answerable": true,
+      "reference_answer": "DAE holders require 60% under Category-F.",
+      "ai_answer": "60% is required for DAE holders under Category-F.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 13,
+      "question": "How can applicants apply to QUEST?",
+      "answerable": true,
+      "reference_answer": "Applicants can apply online via the official website.",
+      "ai_answer": "Applicants can apply online via the official website (https://www.quest.edu.pk/apply-now/).",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 14,
+      "question": "What happens if false information is provided in the application?",
+      "answerable": true,
+      "reference_answer": "Tampering or false information leads to rejection.",
+      "ai_answer": "Tampering or providing false information leads to rejection. Additionally, if fake documents are involved, admission is cancelled and legal action is applied.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 15,
+      "question": "Which documents must be submitted with the application?",
+      "answerable": true,
+      "reference_answer": "Attested SSC/HSC marksheets, domicile, PRC, and certificates must be submitted.",
+      "ai_answer": "Attested SSC/HSC marksheets, domicile, PRC, and certificates must be submitted with the application.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 16,
+      "question": "Is the pre-admission test compulsory?",
+      "answerable": true,
+      "reference_answer": "Yes, it is compulsory for Categories A-I, P, and SF.",
+      "ai_answer": "Yes, the pre-admission test is compulsory for Categories A-I, P, and SF.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 17,
+      "question": "How long is the pre-admission test?",
+      "answerable": true,
+      "reference_answer": "The pre-admission test is 1 hour long.",
+      "ai_answer": "The pre-admission test is 1 hour long.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 18,
+      "question": "What type of questions are in the pre-admission test?",
+      "answerable": true,
+      "reference_answer": "The test contains multiple-choice questions (MCQs).",
+      "ai_answer": "The pre-admission test consists of 1-hour multiple-choice questions (MCQs) covering Math, Physics, Chemistry, and English.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 19,
+      "question": "Which subjects are covered in the pre-admission test?",
+      "answerable": true,
+      "reference_answer": "The test covers Math, Physics, Chemistry, and English.",
+      "ai_answer": "The pre-admission test covers Math, Physics, Chemistry, and English.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 20,
+      "question": "What percentage of merit comes from Matric?",
+      "answerable": true,
+      "reference_answer": "Matric contributes 10% to the merit calculation.",
+      "ai_answer": "10%",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 21,
+      "question": "What percentage of merit comes from HSC-I?",
+      "answerable": true,
+      "reference_answer": "HSC-I contributes 20% to the merit calculation.",
+      "ai_answer": "20%",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 22,
+      "question": "What percentage of merit comes from the admission test?",
+      "answerable": true,
+      "reference_answer": "The test contributes 70% to the merit calculation.",
+      "ai_answer": "70%",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 23,
+      "question": "What is the merit formula at QUEST?",
+      "answerable": true,
+      "reference_answer": "Merit is calculated as Matric 10% + HSC-I 20% + Test 70%.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 24,
+      "question": "What is the first-semester fee for B.E, BS, and B.Tech in Batch-24?",
+      "answerable": true,
+      "reference_answer": "The first-semester fee is PKR 58,500.",
+      "ai_answer": "The first-semester fee for B.E, BS, and B.Tech in Batch-24 is PKR 58,500.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 25,
+      "question": "What is the fee for the 2nd, 4th, 6th, and 8th semesters for B.E/BS/B.Tech?",
+      "answerable": true,
+      "reference_answer": "The fee is PKR 29,250.",
+      "ai_answer": "The fee for the 2nd, 4th, 6th, and 8th semesters for B.E / BS / B.Tech is PKR 29,250.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 26,
+      "question": "What is the fee for the 3rd, 5th, and 7th semesters for B.E/BS/B.Tech?",
+      "answerable": true,
+      "reference_answer": "The fee is PKR 48,500.",
+      "ai_answer": "The fee for the 3rd, 5th, and 7th semesters for B.E / BS / B.Tech is PKR 48,500.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 27,
+      "question": "What is the first-semester fee for BS Physics/Chemistry?",
+      "answerable": true,
+      "reference_answer": "The first-semester fee is PKR 33,650.",
+      "ai_answer": "The first-semester fee for BS Physics/Chemistry is PKR 33,650.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 28,
+      "question": "What are the even and odd semester fees for BS Administration Physics/Chemistry?",
+      "answerable": true,
+      "reference_answer": "The fees are PKR 29,250 and PKR 42,350 for even and odd semesters respectively.",
+      "ai_answer": "For BS Administration Physics/Chemistry, the even and odd semester fees are PKR 29,250 / 42,350.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 29,
+      "question": "How much is the summer semester fee for 3 credit hours?",
+      "answerable": true,
+      "reference_answer": "The summer semester fee is PKR 6,000 for 3 credit hours.",
+      "ai_answer": "PKR 6,000",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 30,
+      "question": "How much is the summer semester fee for 2 credit hours?",
+      "answerable": true,
+      "reference_answer": "The summer semester fee is PKR 4,000 for 2 credit hours.",
+      "ai_answer": "PKR 4,000",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 31,
+      "question": "What is the summer practical fee?",
+      "answerable": true,
+      "reference_answer": "The summer practical fee is PKR 3,000.",
+      "ai_answer": "PKR 3,000",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 32,
+      "question": "What is the examination fee per exam?",
+      "answerable": true,
+      "reference_answer": "The examination fee is PKR 2,750 per exam.",
+      "ai_answer": "PKR 2,750 per exam.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 33,
+      "question": "What is the migration fee?",
+      "answerable": true,
+      "reference_answer": "The migration fee is PKR 2,000.",
+      "ai_answer": "The migration fee is PKR 2,000.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 34,
+      "question": "What is the self-finance fee for B.E Civil?",
+      "answerable": true,
+      "reference_answer": "The self-finance fee for B.E Civil is PKR 1,155,000.",
+      "ai_answer": "The self-finance fee for B.E Civil is PKR 1,155,000.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 35,
+      "question": "What is the self-finance fee for BS CS/AI?",
+      "answerable": true,
+      "reference_answer": "The self-finance fee for BS CS/AI is PKR 630,000.",
+      "ai_answer": "The self-finance fee for BS CS/AI is PKR 630,000.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 36,
+      "question": "Who cannot get hostel accommodation according to the document?",
+      "answerable": true,
+      "reference_answer": "Hostel accommodation is not available for students within 30 km.",
+      "ai_answer": "Students within 30km cannot get hostel accommodation.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 37,
+      "question": "What happens after a two-week absence?",
+      "answerable": true,
+      "reference_answer": "A two-week absence leads to automatic cancellation.",
+      "ai_answer": "A two-week absence leads to automatic cancellation.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 38,
+      "question": "What is the fee range for foreign students?",
+      "answerable": true,
+      "reference_answer": "Foreign students pay USD 6,000–10,000 depending on the scheme.",
+      "ai_answer": "USD 6,000–10,000 depending on scheme.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 39,
+      "question": "Where should students look for detailed seat distribution?",
+      "answerable": true,
+      "reference_answer": "Students should refer to Tables 1-7 in the prospectus for detailed seat distribution.",
+      "ai_answer": "Students should refer to Tables 1-7 in the prospectus for detailed seat distribution (district/category-wise).",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 40,
+      "question": "What is the full name of QUEST?",
+      "answerable": true,
+      "reference_answer": "QUEST stands for Quaid-e-Awam University of Engineering, Science & Technology.",
+      "ai_answer": "Quaid-e-Awam University of Engineering, Science & Technology",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 41,
+      "question": "Where is QUEST located?",
+      "answerable": true,
+      "reference_answer": "QUEST is located in Nawabshah, Sindh, Pakistan.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 42,
+      "question": "What is the university telephone number shown in the document?",
+      "answerable": true,
+      "reference_answer": "The telephone number is +92 244 9370367.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": false,
+      "refusal_correct": null
+    },
+    {
+      "id": 43,
+      "question": "What email address is shown for QUEST?",
+      "answerable": true,
+      "reference_answer": "The email address is info@quest.edu.pk.",
+      "ai_answer": "info@quest.edu.pk",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 44,
+      "question": "What does QUEST say it is dedicated to?",
+      "answerable": true,
+      "reference_answer": "QUEST says it is dedicated to delivering world-class education, fostering research, and nurturing innovation for a brighter future.",
+      "ai_answer": "QUEST is dedicated to delivering world-class education, fostering research, and nurturing innovation for a brighter future.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 45,
+      "question": "Does the document mention a prospectus?",
+      "answerable": true,
+      "reference_answer": "Yes. The document provides a Download Prospectus option and refers to the prospectus for detailed seat distribution.",
+      "ai_answer": "Yes, the document mentions the prospectus (referring to it for district/category-wise details in Tables 1-7, and providing a download option).",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 46,
+      "question": "Does the document provide an online Apply Now option?",
+      "answerable": true,
+      "reference_answer": "Yes. It provides an Apply Now option for undergraduate and postgraduate applications.",
+      "ai_answer": "Yes, the document provides an online Apply Now option. You can apply online via the official website, and the pages include options such as \"Apply online via official website\", \"Apply Now For Undergraduate\", and \"Apply Now For Postgraduate\".",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 47,
+      "question": "Does the document mention admissions?",
+      "answerable": true,
+      "reference_answer": "Yes. Admissions are listed as one of the university's key areas/quick links.",
+      "ai_answer": "Yes, the document provides information on admission rules and procedures, eligibility, the application process, the pre-admission test, and the fee structure.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 48,
+      "question": "Does the document mention academics?",
+      "answerable": true,
+      "reference_answer": "Yes. Academics is listed as a university section/quick link.",
+      "ai_answer": "Yes.",
+      "reference_pages": [
+        2,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 49,
+      "question": "Does the document mention research?",
+      "answerable": true,
+      "reference_answer": "Yes. Research is listed as a university section/quick link.",
+      "ai_answer": "Yes, the document mentions research. It states that Quaid-e-Awam University of Engineering, Science & Technology (QUEST) is dedicated to fostering research, and \"Research\" is also listed among the sections/menu items.",
+      "reference_pages": [
+        2,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 50,
+      "question": "Does the document mention campus life?",
+      "answerable": true,
+      "reference_answer": "Yes. Campus Life is listed as a university section.",
+      "ai_answer": "Yes, the document mentions campus life, including that a hostel is not available for students living within 30km, a 2-week absence leads to automatic cancellation, and students can stay updated with campus news, events, and announcements.",
+      "reference_pages": [
+        1,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 51,
+      "question": "Does the document mention downloads?",
+      "answerable": true,
+      "reference_answer": "Yes. Downloads is listed as a university section/quick link.",
+      "ai_answer": "Yes, the document mentions \"Downloads\" (including \"Download Prospectus\").",
+      "reference_pages": [
+        1,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 52,
+      "question": "Does the document mention a Telephone Directory?",
+      "answerable": true,
+      "reference_answer": "Yes. Telephone Directory is listed in the university navigation.",
+      "ai_answer": "Yes, the document mentions \"Telephone Directory\".",
+      "reference_pages": [
+        1,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 53,
+      "question": "Does the document mention Teacher/Officer Login?",
+      "answerable": true,
+      "reference_answer": "Yes. Teacher/Officer Login is listed in the navigation.",
+      "ai_answer": "Yes, the document mentions \"Teacher/Officer Login\".",
+      "reference_pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 54,
+      "question": "Does the document mention Department Login?",
+      "answerable": true,
+      "reference_answer": "Yes. Department Login is listed in the navigation.",
+      "ai_answer": "Yes, the document mentions \"Department Login\".",
+      "reference_pages": [
+        1,
+        2,
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 55,
+      "question": "Is Mathematics required for Pre-Medical students entering the listed programs?",
+      "answerable": true,
+      "reference_answer": "Yes. Pre-Medical students can enter the listed programs with a Mathematics course.",
+      "ai_answer": "Yes, Pre-Medical students are eligible for IT, AI, Chemistry, and English provided they take a Mathematics course.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 56,
+      "question": "Are Hifz-ul-Quran marks included in the 60% Engineering requirement?",
+      "answerable": true,
+      "reference_answer": "No. The 60% Engineering requirement excludes Hifz-ul-Quran.",
+      "ai_answer": "No, Hifz-ul-Quran marks are excluded from the 60% requirement for Engineering programs.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 57,
+      "question": "Are grace marks included in the Engineering merit requirement?",
+      "answerable": true,
+      "reference_answer": "No. Grace marks are not counted.",
+      "ai_answer": "No, grace marks are not counted.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 58,
+      "question": "Does Category-F apply to DAE holders?",
+      "answerable": true,
+      "reference_answer": "Yes. DAE holders require 60% under Category-F.",
+      "ai_answer": "Yes, Category-F applies to DAE holders, requiring 60%.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 59,
+      "question": "Are Categories A-I, P and SF covered by the compulsory pre-admission test?",
+      "answerable": true,
+      "reference_answer": "Yes. The pre-admission test is compulsory for Categories A-I, P, and SF.",
+      "ai_answer": "Yes, the pre-admission test is compulsory for Categories A-I, P, and SF.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 60,
+      "question": "Is the pre-admission test one hour or two hours?",
+      "answerable": true,
+      "reference_answer": "It is a 1-hour test.",
+      "ai_answer": "The pre-admission test is one hour.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 61,
+      "question": "Does the merit formula give the largest weight to the test?",
+      "answerable": true,
+      "reference_answer": "Yes. The test has the largest weight at 70%.",
+      "ai_answer": "Yes. According to the merit formula, the test carries a weight of 70%, which is the largest weight (compared to Matric at 10% and HSC-I at 20%).",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 62,
+      "question": "Is the B.E/BS/B.Tech first semester fee PKR 58,500 or PKR 29,250?",
+      "answerable": true,
+      "reference_answer": "The first-semester fee is PKR 58,500.",
+      "ai_answer": "The B.E/BS/B.Tech first semester fee is PKR 58,500.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 63,
+      "question": "Which semesters have a PKR 29,250 fee for B.E/BS/B.Tech?",
+      "answerable": true,
+      "reference_answer": "The 2nd, 4th, 6th, and 8th semesters have a fee of PKR 29,250.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 64,
+      "question": "Which semesters have a PKR 48,500 fee for B.E/BS/B.Tech?",
+      "answerable": true,
+      "reference_answer": "The 3rd, 5th, and 7th semesters have a fee of PKR 48,500.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 65,
+      "question": "What is the practical fee in the summer semester?",
+      "answerable": true,
+      "reference_answer": "The practical fee is PKR 3,000.",
+      "ai_answer": "PKR 3,000",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 66,
+      "question": "What is the examination and migration fee information?",
+      "answerable": true,
+      "reference_answer": "The examination fee is PKR 2,750 per exam, while migration costs PKR 2,000.",
+      "ai_answer": "The examination and migration fee information is:\n* PKR 2,750 per exam\n* PKR 2,000 for migration",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 67,
+      "question": "Is hostel unavailable for students who live within 30 km?",
+      "answerable": true,
+      "reference_answer": "Yes. Hostel is not available for students within 30 km.",
+      "ai_answer": "Yes, the hostel is not available for students who live within 30 km.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 68,
+      "question": "Is a two-week absence enough to cause automatic cancellation?",
+      "answerable": true,
+      "reference_answer": "Yes. A two-week absence leads to automatic cancellation.",
+      "ai_answer": "Yes, a two-week absence leads to automatic cancellation.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 69,
+      "question": "What is the foreign-student fee range?",
+      "answerable": true,
+      "reference_answer": "The foreign-student fee is USD 6,000–10,000 depending on the scheme.",
+      "ai_answer": "USD 6,000–10,000 depending on scheme.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 70,
+      "question": "Which tables contain detailed district/category-wise seat distribution?",
+      "answerable": true,
+      "reference_answer": "Tables 1-7 in the prospectus contain the detailed seat distribution.",
+      "ai_answer": "Tables 1-7 in the prospectus contain detailed district/category-wise seat distribution.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 71,
+      "question": "What city and province is QUEST in?",
+      "answerable": true,
+      "reference_answer": "QUEST is in Nawabshah, Sindh, Pakistan.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 72,
+      "question": "What is QUEST's contact email?",
+      "answerable": true,
+      "reference_answer": "QUEST's contact email is info@quest.edu.pk.",
+      "ai_answer": "QUEST's contact email is info@quest.edu.pk.",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 73,
+      "question": "What phone number is provided for contact?",
+      "answerable": true,
+      "reference_answer": "The contact phone number is +92 244 9370367.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [
+        3
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": false,
+      "page_retrieval_hit": false,
+      "refusal_correct": null
+    },
+    {
+      "id": 74,
+      "question": "Does QUEST describe research as part of its mission?",
+      "answerable": true,
+      "reference_answer": "Yes. QUEST says it is dedicated to fostering research.",
+      "ai_answer": "Yes, QUEST states in its mission that it is dedicated to fostering research.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 75,
+      "question": "Does QUEST mention innovation in its mission statement?",
+      "answerable": true,
+      "reference_answer": "Yes. QUEST says it is dedicated to nurturing innovation.",
+      "ai_answer": "Yes, QUEST states that it is dedicated to nurturing innovation for a brighter future.",
+      "reference_pages": [
+        2
+      ],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 76,
+      "question": "What happens to an application containing tampered or false information?",
+      "answerable": true,
+      "reference_answer": "It is rejected.",
+      "ai_answer": "Tampering or providing false information leads to rejection of the application.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 77,
+      "question": "What documents are specifically mentioned for submission?",
+      "answerable": true,
+      "reference_answer": "The document lists attested SSC/HSC marksheets, domicile, PRC, and certificates.",
+      "ai_answer": "Attested SSC/HSC marksheets, domicile, PRC, and certificates.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 78,
+      "question": "Can a rusticated student be eligible for admission?",
+      "answerable": true,
+      "reference_answer": "No. Students who are rusticated or debarred are ineligible.",
+      "ai_answer": "No, a rusticated student is ineligible for admission.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 79,
+      "question": "Can a debarred student be eligible for admission?",
+      "answerable": true,
+      "reference_answer": "No. Students who are rusticated or debarred are ineligible.",
+      "ai_answer": "No, a debarred student is ineligible for admission.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 80,
+      "question": "Can Pre-Engineering students apply to Science programs?",
+      "answerable": true,
+      "reference_answer": "Yes. Pre-Engineering students are eligible for Science programs.",
+      "ai_answer": "Yes, Pre-Engineering students are eligible for Engineering & Science programs.",
+      "reference_pages": [
+        1
+      ],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": true,
+      "refusal_correct": null
+    },
+    {
+      "id": 81,
+      "question": "What is the exact closing date for undergraduate applications?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 82,
+      "question": "Who is the current Vice Chancellor of QUEST?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 83,
+      "question": "How many students are enrolled at QUEST this year?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 84,
+      "question": "What is the hostel monthly rent?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 85,
+      "question": "What are the class timings for the AI department?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 86,
+      "question": "How many marks are required to pass each university course?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 87,
+      "question": "What is the exact tuition fee for the AI department's second year?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 88,
+      "question": "Does QUEST provide laptops to all new students?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 89,
+      "question": "What is the current ranking of QUEST in Pakistan?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 90,
+      "question": "How many scholarships are available this year?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 91,
+      "question": "What is the scholarship application deadline?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 92,
+      "question": "Who is the Head of the Artificial Intelligence department?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 93,
+      "question": "How many AI faculty members are currently employed?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 94,
+      "question": "What is the exact bus route from Nawabshah city to campus?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "2",
+        "3"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 95,
+      "question": "Does the university provide free transport to every student?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 96,
+      "question": "What is the average salary of a QUEST graduate?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 97,
+      "question": "What are the cafeteria opening and closing times?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 98,
+      "question": "How many seats are available specifically for the AI program?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 99,
+      "question": "What is the exact semester start date for Batch-24?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    },
+    {
+      "id": 100,
+      "question": "Does QUEST offer a fully funded international exchange program?",
+      "answerable": false,
+      "reference_answer": "I could not find this information in the available university documents.",
+      "ai_answer": "I could not find this information in the available university documents.",
+      "reference_pages": [],
+      "retrieved_pages": [
+        "1",
+        "2"
+      ],
+      "answer_correct": true,
+      "page_retrieval_hit": null,
+      "refusal_correct": true
+    }
+  ]
+}

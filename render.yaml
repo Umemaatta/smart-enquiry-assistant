@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: smart-enquiry-assistant
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false

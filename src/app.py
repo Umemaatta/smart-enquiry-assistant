@@ -117,7 +117,7 @@ bm25 = BM25Okapi(
 # =========================================================
 
 model = genai.GenerativeModel(
-    "gemini-3.6-flash"
+    "gemini-flash-lite-latest"
 )
 
 
@@ -150,7 +150,7 @@ def answer_question(question, history):
 
     if not question or not question.strip():
 
-        return history or [], ""
+        return history or []
 
     question = question.strip()
 
@@ -327,21 +327,13 @@ University Information:
 
     if source_pages:
 
-        sources = "\n".join(
+        pages_line = " · ".join(f"Page {page}" for page in source_pages)
 
-            [
-
-                f"📄 QUEST University PDF — Page {page}"
-
-                for page in source_pages
-
-            ]
-
-        )
+        answer_text = f"{answer_text}\n\n**Sources:** {pages_line}"
 
     else:
 
-        sources = "No document source found."
+        answer_text = f"{answer_text}\n\n*No document source found for this answer.*"
 
 
     # =====================================================
@@ -371,7 +363,7 @@ University Information:
     )
 
 
-    return history, sources
+    return history
 
 
 # =========================================================
@@ -380,7 +372,7 @@ University Information:
 
 def clear_chat():
 
-    return [], ""
+    return []
 
 
 # =========================================================
@@ -389,40 +381,41 @@ def clear_chat():
 
 css = """
 
+:root {
+    --quest-navy: #1f4e79;
+    --quest-navy-dark: #163b5d;
+    --quest-bg: #f4f6f9;
+    --quest-border: #dde3ea;
+    --quest-text: #2a2f36;
+    --quest-muted: #667080;
+}
+
 body {
-    background: #f4f7f9;
+    background: var(--quest-bg);
 }
 
 .gradio-container {
-    max-width: 1150px !important;
+    max-width: 880px !important;
 }
 
 
 /* =====================================================
-   LARGE QUEST HEADER
+   HERO (LOGO + TITLE)
    ===================================================== */
 
-.quest-header {
+.quest-hero {
 
     width: 100%;
 
-    height: 380px;
-
-    background: white;
-
-    border-bottom: 5px solid #1f4e79;
-
     display: flex;
 
-    justify-content: center;
+    flex-direction: column;
 
     align-items: center;
 
-    padding: 0;
+    text-align: center;
 
-    margin-bottom: 25px;
-
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    padding: 28px 16px 20px 16px;
 
     box-sizing: border-box;
 }
@@ -430,205 +423,240 @@ body {
 
 .quest-logo {
 
-    display: block;
+    height: clamp(72px, 12vw, 150px);
 
-    width: 100%;
+    width: auto;
 
-    height: 360px;
+    max-width: 90vw;
 
     object-fit: contain;
 
-    object-position: center;
+    display: block;
+
+    margin: 0 auto 14px auto;
 }
 
 
-/* =====================================================
-   PAGE TITLE
-   ===================================================== */
+.quest-hero h1 {
 
-.page-title {
+    color: var(--quest-navy);
 
-    text-align: center;
-
-    margin: 15px 0 30px 0;
-}
-
-
-.page-title h1 {
-
-    color: #1f4e79;
-
-    font-size: 32px;
+    font-size: clamp(20px, 3vw, 28px);
 
     font-weight: 700;
 
-    margin-bottom: 8px;
+    margin: 0 0 4px 0;
+
+    line-height: 1.25;
 }
 
 
-.page-title p {
+.quest-hero .quest-subtitle {
 
-    color: #666;
+    color: var(--quest-muted);
 
-    font-size: 15px;
+    font-size: 14px;
 
-    margin-top: 0;
-}
+    font-weight: 500;
 
-
-/* =====================================================
-   ASK CARD
-   ===================================================== */
-
-.ask-card {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 8px;
-
-    border: 1px solid #dce2e7;
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.05);
-
-    margin-bottom: 10px;
-}
-
-
-.ask-title {
-
-    color: #1f4e79;
-
-    font-size: 19px;
-
-    font-weight: 700;
+    margin: 0;
 }
 
 
 /* =====================================================
-   QUESTION BOX
+   CHAT SHELL (single cohesive panel)
    ===================================================== */
+
+.chat-shell {
+
+    background: #ffffff;
+
+    border: 1px solid var(--quest-border);
+
+    border-radius: 16px;
+
+    box-shadow: 0 2px 14px rgba(20, 30, 45, 0.06);
+
+    padding: 10px 18px 18px 18px;
+
+    box-sizing: border-box;
+}
+
+
+.chat-toolbar {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    padding: 6px 0 2px 0;
+}
+
+
+#clear-button {
+
+    background: transparent !important;
+
+    color: var(--quest-muted) !important;
+
+    border: 1px solid var(--quest-border) !important;
+
+    border-radius: 20px !important;
+
+    font-weight: 500 !important;
+
+    font-size: 12.5px !important;
+
+    padding: 4px 14px !important;
+
+    box-shadow: none !important;
+}
+
+
+#clear-button:hover {
+
+    color: var(--quest-navy) !important;
+
+    border-color: var(--quest-navy) !important;
+}
+
+
+/* =====================================================
+   CHAT WINDOW
+   ===================================================== */
+
+.chat-window {
+
+    background: #fbfcfd;
+
+    border: 1px solid var(--quest-border) !important;
+
+    border-radius: 12px;
+}
+
+
+.chat-window .message-wrap,
+.chat-window .prose {
+
+    font-size: 15.5px !important;
+
+    line-height: 1.65 !important;
+}
+
+
+/* =====================================================
+   INPUT ROW
+   ===================================================== */
+
+.input-row {
+
+    margin-top: 12px;
+
+    align-items: flex-end !important;
+
+    gap: 8px;
+}
+
 
 #question-box textarea {
 
     border: 1px solid #cbd5df !important;
 
-    border-radius: 6px !important;
+    border-radius: 22px !important;
 
-    background: white !important;
+    background: #fbfcfd !important;
 
     font-size: 15px !important;
+
+    padding: 12px 18px !important;
 }
 
 
 #question-box textarea:focus {
 
-    border: 2px solid #1f4e79 !important;
+    border: 2px solid var(--quest-navy) !important;
 }
 
 
-/* =====================================================
-   BUTTON
-   ===================================================== */
-
 #ask-button {
 
-    background: #1f4e79 !important;
+    background: var(--quest-navy) !important;
 
     color: white !important;
 
     border: none !important;
 
     font-weight: 600 !important;
+
+    border-radius: 22px !important;
+
+    min-width: 84px;
 }
 
 
 #ask-button:hover {
 
-    background: #163b5d !important;
+    background: var(--quest-navy-dark) !important;
 }
 
 
 /* =====================================================
-   CONVERSATION
+   EXAMPLE CHIPS
    ===================================================== */
 
-.conversation-title {
+.chip-label {
 
-    color: #1f4e79;
+    margin-top: 16px !important;
 
-    font-size: 19px;
+    color: var(--quest-muted) !important;
 
-    font-weight: 700;
+    font-size: 13px !important;
+}
 
-    margin-bottom: 8px;
+.chip-label p {
+    margin: 0 !important;
 }
 
 
-.chat-container {
+.chip-row {
 
-    background: white;
+    flex-wrap: wrap !important;
 
-    border: 1px solid #dce2e7;
-
-    border-radius: 8px;
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.05);
+    gap: 8px !important;
 }
 
 
-/* =====================================================
-   SOURCES
-   ===================================================== */
+.example-chip {
 
-.sources-title {
+    background: #eef3f8 !important;
 
-    color: #1f4e79;
+    color: var(--quest-navy) !important;
 
-    font-size: 18px;
+    border: 1px solid var(--quest-border) !important;
 
-    font-weight: 700;
+    border-radius: 18px !important;
+
+    font-size: 13px !important;
+
+    font-weight: 500 !important;
+
+    padding: 7px 15px !important;
+
+    box-shadow: none !important;
+
+    width: auto !important;
+
+    flex: 0 1 auto !important;
 }
 
 
-#source-box textarea {
+.example-chip:hover {
 
-    background: white !important;
-}
+    background: var(--quest-navy) !important;
 
+    color: white !important;
 
-/* =====================================================
-   COMMON QUESTIONS
-   ===================================================== */
-
-.common-title {
-
-    color: #1f4e79;
-
-    font-size: 19px;
-
-    font-weight: 700;
-
-    margin-top: 25px;
-}
-
-
-.question-card {
-
-    background: white;
-
-    border: 1px solid #dce2e7;
-
-    border-radius: 6px;
-
-    padding: 12px 15px;
-
-    margin: 6px 0;
-
-    color: #444;
+    border-color: var(--quest-navy) !important;
 }
 
 
@@ -640,61 +668,64 @@ body {
 
     text-align: center;
 
-    background: white;
+    padding: 16px 15px 4px 15px;
 
-    border-top: 3px solid #1f4e79;
+    color: var(--quest-muted);
 
-    padding: 22px 15px;
+    font-size: 12.5px;
 
-    margin-top: 30px;
-
-    color: #666;
-
-    font-size: 13px;
-
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 
-.footer-title {
+.quest-footer .footer-title {
 
-    color: #1f4e79;
+    color: var(--quest-navy);
 
     font-weight: 700;
-
-    font-size: 14px;
 }
 
 
 /* =====================================================
-   MOBILE
+   RESPONSIVE
    ===================================================== */
+
+@media (max-width: 1024px) {
+
+    .gradio-container {
+
+        max-width: 100% !important;
+
+        padding: 0 16px !important;
+    }
+}
+
 
 @media (max-width: 700px) {
 
-    .quest-header {
+    .quest-hero {
 
-        min-height: 220px;
-
-        height: 220px;
-
-        padding: 5px 10px;
+        padding: 18px 8px 14px 8px;
     }
 
+    .chat-shell {
 
-    .quest-logo {
+        padding: 8px 10px 12px 10px;
 
-        width: 330px;
-
-        height: 210px;
+        border-radius: 12px;
     }
 
+    #question-box textarea {
 
-    .page-title h1 {
-
-        font-size: 25px;
+        padding: 10px 14px !important;
     }
 
+    .example-chip {
+
+        font-size: 12.5px !important;
+
+        padding: 6px 12px !important;
+    }
 }
 
 """
@@ -704,20 +735,27 @@ body {
 # 11. GRADIO APP
 # =========================================================
 
+EXAMPLE_QUESTIONS = [
+    "What is the minimum percentage required for Engineering programs?",
+    "How is the merit calculated?",
+    "What is the fee for B.E programs?",
+    "Is Pre-Medical eligible for Artificial Intelligence?",
+]
+
 with gr.Blocks(
-    title="QUEST Smart Enquiry Assistant"
+    title="QUEST Smart Enquiry Assistant",
 ) as app:
 
 
     # -----------------------------------------------------
-    # HEADER - ONLY QUEST LOGO
+    # HERO (LOGO + TITLE)
     # -----------------------------------------------------
 
     gr.HTML(
 
         f"""
 
-        <div class="quest-header">
+        <div class="quest-hero">
 
             <img
                 src="data:image/png;base64,{logo_base64}"
@@ -725,31 +763,8 @@ with gr.Blocks(
                 alt="QUEST Logo"
             >
 
-        </div>
-
-        """
-
-    )
-
-
-    # -----------------------------------------------------
-    # TITLE
-    # -----------------------------------------------------
-
-    gr.HTML(
-
-        """
-
-        <div class="page-title">
-
-            <h1>
-                Smart Enquiry Assistant
-            </h1>
-
-            <p>
-                Get quick answers about admissions,
-                eligibility, fees and university procedures.
-            </p>
+            <h1>Smart Enquiry Assistant</h1>
+            <p class="quest-subtitle">Your AI-powered university information assistant</p>
 
         </div>
 
@@ -759,149 +774,71 @@ with gr.Blocks(
 
 
     # -----------------------------------------------------
-    # ASK QUESTION
+    # CHAT SHELL
     # -----------------------------------------------------
 
-    gr.HTML(
+    with gr.Column(elem_classes=["chat-shell"]):
 
-        """
+        with gr.Row(elem_classes=["chat-toolbar"]):
 
-        <div class="ask-card">
+            clear_button = gr.Button(
+                "Clear Chat",
+                elem_id="clear-button",
+                size="sm",
+            )
 
-            <div class="ask-title">
-                🔎 Ask Your Question
-            </div>
+        chatbot = gr.Chatbot(
 
-        </div>
+            label="",
 
-        """
+            height=480,
 
-    )
+            elem_classes=["chat-window"],
 
-
-    question = gr.Textbox(
-
-        label="Question",
-
-        placeholder="Type your question here...",
-
-        lines=2,
-
-        elem_id="question-box"
-
-    )
-
-
-    # -----------------------------------------------------
-    # BUTTONS
-    # -----------------------------------------------------
-
-    with gr.Row():
-
-        ask_button = gr.Button(
-
-            "Ask Question",
-
-            variant="primary",
-
-            elem_id="ask-button"
+            placeholder="Ask a question about QUEST University to get started.",
 
         )
 
+        with gr.Row(elem_classes=["input-row"]):
 
-        clear_button = gr.Button(
+            question = gr.Textbox(
 
-            "Clear Conversation"
+                label="",
 
-        )
+                show_label=False,
 
+                placeholder="Ask anything about QUEST University...",
 
-    # -----------------------------------------------------
-    # CONVERSATION
-    # -----------------------------------------------------
+                lines=1,
 
-    gr.Markdown(
+                max_lines=6,
 
-        "### 💬 Conversation",
+                elem_id="question-box",
 
-        elem_classes=["conversation-title"]
+                scale=8,
 
-    )
+            )
 
+            ask_button = gr.Button(
 
-    chatbot = gr.Chatbot(
+                "Ask",
 
-        label="",
+                variant="primary",
 
-        height=450,
+                elem_id="ask-button",
 
-        elem_classes=["chat-container"]
+                scale=1,
 
-    )
+            )
 
+        gr.Markdown("**Try asking**", elem_classes=["chip-label"])
 
-    # -----------------------------------------------------
-    # SOURCES
-    # -----------------------------------------------------
+        with gr.Row(elem_classes=["chip-row"]):
 
-    gr.Markdown(
-
-        "### 📚 Document Sources",
-
-        elem_classes=["sources-title"]
-
-    )
-
-
-    source = gr.Textbox(
-
-        label="Retrieved information",
-
-        interactive=False,
-
-        lines=3,
-
-        elem_id="source-box"
-
-    )
-
-
-    # -----------------------------------------------------
-    # COMMON QUESTIONS
-    # -----------------------------------------------------
-
-    gr.Markdown(
-
-        "### 💡 Common Questions",
-
-        elem_classes=["common-title"]
-
-    )
-
-
-    gr.Markdown(
-
-        """
-
-        <div class="question-card">
-        • What is the minimum percentage required for Engineering programs?
-        </div>
-
-        <div class="question-card">
-        • How is the merit calculated?
-        </div>
-
-        <div class="question-card">
-        • What is the fee for B.E programs?
-        </div>
-
-        <div class="question-card">
-        • Is Pre-Medical eligible for Artificial Intelligence?
-        </div>
-
-        """
-
-    )
+            example_buttons = [
+                gr.Button(q, elem_classes=["example-chip"])
+                for q in EXAMPLE_QUESTIONS
+            ]
 
 
     # -----------------------------------------------------
@@ -914,17 +851,10 @@ with gr.Blocks(
 
         <div class="quest-footer">
 
-            <div class="footer-title">
-                Smart Enquiry Assistant
-            </div>
+            <div class="footer-title">Smart Enquiry Assistant | University Information System</div>
 
-            This system provides answers only from
-            available university documents.
-
-            <br>
-
-            Please verify important information
-            with QUEST University.
+            This system provides answers only from available university documents.
+            Please verify important information with QUEST University.
 
         </div>
 
@@ -947,8 +877,7 @@ with gr.Blocks(
         ],
 
         outputs=[
-            chatbot,
-            source
+            chatbot
         ]
 
     ).then(
@@ -970,8 +899,7 @@ with gr.Blocks(
         ],
 
         outputs=[
-            chatbot,
-            source
+            chatbot
         ]
 
     ).then(
@@ -988,11 +916,35 @@ with gr.Blocks(
         fn=clear_chat,
 
         outputs=[
-            chatbot,
-            source
+            chatbot
         ]
 
     )
+
+
+    for btn, example_text in zip(example_buttons, EXAMPLE_QUESTIONS):
+
+        btn.click(
+
+            fn=lambda example_text=example_text: example_text,
+
+            outputs=[question]
+
+        ).then(
+
+            fn=answer_question,
+
+            inputs=[question, chatbot],
+
+            outputs=[chatbot]
+
+        ).then(
+
+            fn=lambda: "",
+
+            outputs=question
+
+        )
 
 
 # =========================================================
