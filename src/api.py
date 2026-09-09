@@ -13,6 +13,8 @@ Run from the project root with:
 """
 
 import os
+import sys
+import subprocess
 
 import chromadb
 import google.generativeai as genai
@@ -56,9 +58,31 @@ embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 database_path = "data/chroma_db"
 
+os.makedirs("data", exist_ok=True)
+
+# data/chroma_db is gitignored, so a fresh deployment (Railway) starts with no
+# vector database. data/quest_text.txt IS committed, so create_database.py can
+# rebuild the collection from it on first boot. Without this the server would
+# crash on startup with "collection quest_documents does not exist".
+if not os.path.exists(database_path):
+
+    print("ChromaDB not found. Building it from data/quest_text.txt ...")
+
+    subprocess.run([sys.executable, "src/create_database.py"], check=True)
+
 client = chromadb.PersistentClient(path=database_path)
 
-collection = client.get_collection(name="quest_documents")
+try:
+
+    collection = client.get_collection(name="quest_documents")
+
+except Exception:
+
+    print("Collection not found. Building the database ...")
+
+    subprocess.run([sys.executable, "src/create_database.py"], check=True)
+
+    collection = client.get_collection(name="quest_documents")
 
 data = collection.get()
 
