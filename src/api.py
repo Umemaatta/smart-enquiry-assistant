@@ -19,6 +19,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from rank_bm25 import BM25Okapi
@@ -244,7 +245,7 @@ class AskRequest(BaseModel):
     question: str
 
 
-@app.get("/")
+@app.get("/health")
 def health_check():
     return {"status": "ok", "message": "Smart Enquiry Assistant API is running."}
 
@@ -256,3 +257,33 @@ def ask(request: AskRequest):
         return {"answer": "Please type a question.", "sources": []}
 
     return get_answer(request.question)
+
+
+# =========================================================
+# 8. REACT FRONTEND (production)
+# =========================================================
+#
+# Serves the built React app (frontend/dist) from the same server, so the
+# frontend and API share one origin and one URL. This mount must stay LAST:
+# a mount on "/" would otherwise swallow the API routes above.
+#
+# In local development you normally run `npm run dev` instead, and this
+# block is simply skipped when frontend/dist has not been built yet.
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+frontend_dist = os.path.join(PROJECT_ROOT, "frontend", "dist")
+
+if os.path.isdir(frontend_dist):
+
+    app.mount(
+        "/",
+        StaticFiles(directory=frontend_dist, html=True),
+        name="frontend",
+    )
+
+    print(f"Serving React frontend from {frontend_dist}")
+
+else:
+
+    print("frontend/dist not found - API only (run 'npm run build' to serve the UI)")

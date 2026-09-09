@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import ChatWindow from "./components/ChatWindow.jsx";
 import MessageInput from "./components/MessageInput.jsx";
+import Footer from "./components/Footer.jsx";
 import { askQuestion } from "./services/api.js";
 import "./styles/App.css";
 
@@ -168,6 +169,8 @@ export default function App() {
         />
 
         <MessageInput onSend={handleSend} loading={loading} />
+
+        <Footer />
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
 node_modules/
-dist/
 .env
+
+# dist/ is intentionally committed: Railway builds this project with the
+# Python runtime, which cannot run `npm run build`. The FastAPI server
+# (src/api.py) serves this folder in production.
+# After changing frontend code, run `npm run build` and commit the result.

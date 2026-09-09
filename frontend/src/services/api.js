@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+// In production the React app is served by the same FastAPI server, so
+// VITE_API_URL is set to "" and requests go to the same origin.
+// `??` (not `||`) so that an intentional empty value is kept.
+const API_URL = import.meta.env.VITE_API_URL ?? "http://127.0.0.1:8000";
 
 /**
  * Sends a question to the Smart Enquiry Assistant backend and
