@@ -1,0 +1,23 @@
+.app-shell {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+}
+
+.app-error-banner {
+  background: #fdecea;
+  color: var(--danger);
+  border-bottom: 1px solid #f5c6c0;
+  padding: 8px 20px;
+  font-size: 13px;
+  text-align: center;
+}

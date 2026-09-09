@@ -1,0 +1,92 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: var(--header-height);
+  padding: 0 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.sidebar-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.sidebar-toggle-btn span {
+  display: block;
+  height: 2px;
+  margin: 0 7px;
+  background: var(--navy);
+  border-radius: 2px;
+}
+
+.header-logo {
+  height: clamp(52px, 7vw, 84px);
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.header-university {
+  min-width: 0;
+}
+
+.header-university h1 {
+  margin: 0;
+  font-size: clamp(17px, 2.4vw, 26px);
+  line-height: 1.15;
+  color: var(--navy);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.header-university .university-line-1 {
+  margin: 3px 0 0 0;
+  font-size: clamp(11px, 1.35vw, 14px);
+  line-height: 1.25;
+  color: var(--navy);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.header-university .university-line-2 {
+  margin: 2px 0 0 0;
+  font-size: clamp(10px, 1.15vw, 12px);
+  line-height: 1.25;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 860px) {
+  .sidebar-toggle-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    height: 84px;
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .header-university .university-line-2 {
+    display: none;
+  }
+}
